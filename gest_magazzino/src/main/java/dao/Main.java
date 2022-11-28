@@ -16,13 +16,13 @@ public class Main {
 
         tomcat.setPort(8080);
 
-        Context ctx = tomcat.addContext("/hello", new File(".").getAbsolutePath());
+        Context ctx = tomcat.addContext("/raffaele", new File(".").getAbsolutePath());
         
         Articolosrv srv = new Articolosrv();
         
-        Tomcat.addServlet(ctx, "hello", srv);
+        Tomcat.addServlet(ctx, "raffaele", srv);
 
-        ctx.addServletMapping("/*", "hello");
+        ctx.addServletMapping("/*", "raffaele");
 
         try {
 			tomcat.start();
